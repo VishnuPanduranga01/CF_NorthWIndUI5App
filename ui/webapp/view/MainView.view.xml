@@ -1,0 +1,37 @@
+<mvc:View controllerName="com.myorg.myUI5App.controller.MainView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Table mode="MultiSelect" items="{path: 'oDataModel>/Products'}">
+                <headerToolbar>
+                    <Toolbar>
+                        <Title text="Products (Correct Usage)" level="H2"/>
+                        <ToolbarSpacer />
+                        <CheckBox text="Strict Layout" select="onCheckBoxSelect"/>
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column>
+                        <Text text="Product ID"/>
+                    </Column>
+                     <Column>
+                        <Text text="Product Name"/>
+                    </Column>
+                     <Column>
+                        <Text text="Product Unit"/>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem vAlign="Middle" type="Navigation">
+                        <cells>
+                            <Text text="{oDataModel>ProductID}" wrapping="false" />
+                            <Text text="{oDataModel>ProductName}" wrapping="false"/>
+                            <Text text="{oDataModel>UnitsOnOrder}" wrapping="false" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

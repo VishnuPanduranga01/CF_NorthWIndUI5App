@@ -1,0 +1,14 @@
+{
+  "name": "cf.app.northwind",
+  "version": "1.0.0",
+  "description": "cloud foundry app with northwind",
+  "scripts": {
+    "start": "node node_modules/@sap/approuter/approuter.js",
+    "build:uimodule": "ui5 build --config=../ui/ui5.yaml --clean-dest --dest approuter/ui/webapp"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sap/approuter": "^11.5.0"
+  }
+}

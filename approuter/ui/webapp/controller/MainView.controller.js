@@ -1,0 +1,1 @@
+sap.ui.define(["./BaseController","sap/ui/model/odata/v2/ODataModel"],function(e,n){"use strict";return e.extend("com.myorg.myUI5App.controller.MainView",{onInit:function(){}})});

@@ -1,0 +1,13 @@
+{
+    "destinations":[
+        {
+            "name":"ui5",
+            "url":"https://ui5.sap.com"
+        },
+        {
+            "name": "northWind",
+            "url": "https://services.odata.org",
+            "forwardAuthToken":true
+        }
+    ]
+}

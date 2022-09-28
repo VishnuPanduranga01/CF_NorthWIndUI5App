@@ -1,0 +1,11 @@
+{
+    "name": "approuterAppTest",
+    "version": "1.0.0",
+    "description": "cloud foundry app with northwind",
+    "scripts": {
+      "build:uimodule": "ui5 build --config=./ui/ui5.yaml --clean-dest --dest approuter/ui/webapp"
+    },
+    "author": "",
+    "license": "ISC"
+  }
+  

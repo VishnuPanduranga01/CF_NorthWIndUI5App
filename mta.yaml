@@ -1,0 +1,38 @@
+_schema-version: "3.2"
+ID: vis-ui5-app-project1
+description: A Fiori application.
+version: 0.0.1
+
+modules:
+  - name: northwind_Ui5App
+    type: approuter.nodejs
+    path: ./approuter
+    build-parameters:
+      builder: custom
+      commands: []
+      ignores:
+        - node_modules
+    requires:
+    - name: destinationSRV
+
+resources:
+  - name: destinationSRV
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: destination
+      service-name: northwidServiceDestination
+      service-plan: lite
+      config:
+         init_data:
+          destinations:
+          - Authentication: NoAuthentication
+            Name: ui5
+            ProxyType: Internet
+            Type: HTTP
+            URL: https://ui5.sap.com
+          - Authentication: NoAuthentication
+            Name: northWind
+            ProxyType: Internet
+            Type: HTTP
+            URL: https://services.odata.org
+          existing_destinations_policy: update
